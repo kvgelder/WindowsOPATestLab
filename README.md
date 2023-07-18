@@ -11,6 +11,4 @@
 - Check and configure DC1 and DM1 firewall settings
 
 ### Fileshare
-- Install DFS Namespaces role on DFSNameServer1
-- Setup Windows Server 2022 Core DFS01
-- Setup Windows Server 2022 Core DFS02
+- Install DFS Namespaces role on DFSNS1

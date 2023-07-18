@@ -1,6 +1,9 @@
 # WindowsOPATestLab
 
 ## TODO
+### Github
+- Move TODO list to GitHub issues
+
 ### Active Directory
 - Runbook AD: AD Object manipulation
 - Runbook AD: Trusts

@@ -14,4 +14,4 @@
 - [ ] Install DFS Namespaces role on DFSNS1
 
 
-![https://github.com/kvgelder/WindowsOPATestLab/blob/main/Documentation/HLD.png]
+![Testlab HLD](https://github.com/kvgelder/WindowsOPATestLab/blob/main/Documentation/HLD.png)

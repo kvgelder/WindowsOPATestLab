@@ -1,3 +1,26 @@
+<# 
+.SYNOPSIS
+    Name:   Distributed File System namespaces.
+
+.DESCRIPTION
+    Script to setup a DFS namespace on Windows Server.
+    
+.INPUTS
+    Modify the <# Input variables> section to your settings/likings.
+
+.OUTPUTS
+    None
+
+.NOTES
+    Author:     Kevin van Gelder
+    Country:    The United States of America
+    Version:    1.0
+    Created:    2023-07-19
+    
+    TODO:
+        
+#>
+
 # Input variables
 $NamespaceName = 'Namespace'
 $HiddenShare = $True

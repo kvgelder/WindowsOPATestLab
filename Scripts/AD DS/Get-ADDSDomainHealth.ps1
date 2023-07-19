@@ -1,3 +1,27 @@
+<# 
+.SYNOPSIS
+    Name:   Active Directory Domain Services health check.
+
+.DESCRIPTION
+    Script that runs various health checks regarding Active Directory Domain Services.
+    
+.INPUTS
+    None
+
+.OUTPUTS
+    None
+
+.NOTES
+    Author:     Kevin van Gelder
+    Country:    The United States of America
+    Version:    1.0
+    Created:    2023-07-19
+    
+    TODO:
+        
+#>
+
+
 function Read-UserInputToContinue {
     if ($psISE) {
         Add-Type -AssemblyName System.Windows.Forms

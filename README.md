@@ -3,13 +3,13 @@
 ![Testlab HLD](https://github.com/kvgelder/WindowsOPATestLab/blob/main/Documentation/HLD.png)
 
 ## Distributed File System
-# Requirements
+### Requirements
 - Require to be domain member or domain controller.
 -	DFS Namespace needs to be installed on the Windows Servers that are part of the DFS (including the file storage servers).
 -	DfsnRoot type DomainV2 requires Windows Server 2008 mode domain space or later.
 -	File Storage servers will need a folder structure that serves as the DFS namespace.
 
-# Setting up the folder structure on the file storage servers.
+### Setting up the folder structure on the file storage servers.
 ```PowerShell
 # Input variables
 $FolderPath = 'C:\DFS\'
@@ -33,7 +33,7 @@ New-item -Path $FullFolderPath -Force
 New-SmbShare -Name $SmbShareName -Description $Description -FullAccess $FullAccess -ReadAccess $ReadAccess -Path $FullFolderPath
 ```
 
-# Creating the DFS Namespace root on the DFS namespace server.
+### Creating the DFS Namespace root on the DFS namespace server.
 Make sure the DFS namespace role is installed on all servers related to your DFS.
 ```PowerShell
 # Input variables

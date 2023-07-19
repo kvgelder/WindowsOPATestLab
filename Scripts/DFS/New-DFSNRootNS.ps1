@@ -14,4 +14,4 @@ $TargetFolderOnServer = $TargetFolderServerName + $SmbShareName
 $DFSNamespace = $Domain + $NamespaceName
 
 # Create DfsnRoot on DFS Namespace server
-New-DfsnRoot -TargetPath $TargetFolderOnServer -Type DomainV2 -Path $DFSNamespace
+New-DfsnRoot -TargetPath $TargetFolderOnServer -Type DomainV2 -Path $DFSNamespace -EnableAccessBasedEnumeration $true

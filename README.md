@@ -3,7 +3,6 @@
 ![Testlab HLD](https://github.com/kvgelder/WindowsOPATestLab/blob/main/Documentation/HLD.png)
 
 ## Active Directory
-### Requirements
 
 ### Setting up an Active Directory domain controller.
 ```PowerShell

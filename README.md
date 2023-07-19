@@ -10,7 +10,7 @@
 -	File Storage servers will need a folder structure that serves as the DFS namespace.
 
 # Setting up the folder structure on the file storage servers.
-```
+```PowerShell
 # Input variables
 $FolderPath = 'C:\DFS\'
 $NamespaceName = 'Namespace'

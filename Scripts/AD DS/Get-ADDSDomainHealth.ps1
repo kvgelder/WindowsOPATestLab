@@ -23,6 +23,11 @@ Netdom /query  FSMO
 Read-UserInputToContinue
 
 function Read-UserInputToContinue {
-    Write-Host -NoNewLine 'Press any key to continue...';
-    $null = $Host.UI.RawUI.ReadKey('NoEcho,IncludeKeyDown');
+    if ($psISE) {
+        Add-Type -AssemblyName System.Windows.Forms
+        [System.Windows.Forms.MessageBox]::Show("Press OK to continue...")
+    } else {
+        Write-Host -NoNewLine 'Press any key to continue...'
+        $null = $Host.UI.RawUI.ReadKey('NoEcho,IncludeKeyDown')
+    }
 }

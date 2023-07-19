@@ -35,7 +35,7 @@ New-SmbShare -Name $SmbShareName -Description $Description -FullAccess $FullAcce
 
 # Creating the DFS Namespace root on the DFS namespace server.
 Make sure the DFS namespace role is installed on all servers related to your DFS.
-```
+```PowerShell
 # Input variables
 $NamespaceName = 'Namespace'
 $HiddenShare = $True

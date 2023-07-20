@@ -35,9 +35,9 @@ if ($HiddenShare) {
 } else { 
     $SmbShareName = $NamespaceName
 }
-$Description = 'SMB share for ' + $NamespaceName + ' DFS namespace.'
+$Description = 'SMB share for the ' + $NamespaceName + ' DFS namespace.'
 
 # Create folder structure. Change folder names as necessary.
-New-item -Path $FullFolderPath -Force
+New-item -Path $FullFolderPath -Force -Type Directory
 # Create SMB share for above folder structure
 New-SmbShare -Name $SmbShareName -Description $Description -FullAccess $FullAccess -ReadAccess $ReadAccess -Path $FullFolderPath

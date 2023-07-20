@@ -120,6 +120,9 @@ New-DfsnRoot -TargetPath $TargetFolderOnServer -Type DomainV2 -Path $DFSNamespac
 ```
 
 ## TODO
+### Github scripts
+- [ ] Update code the scripts files.
+
 ### Active Directory
 - [ ] Runbook AD: AD Object manipulation
 - [ ] Runbook AD: Trusts

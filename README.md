@@ -3,11 +3,11 @@
 ![Testlab HLD](https://github.com/kvgelder/WindowsOPATestLab/blob/main/Documentation/HLD.png)
 
 ## Active Directory
-![For detailed Active Directory configuration, see ADDS.md](ADDS.md)
+![For detailed Active Directory configuration, see ADDS.md](/ADDS.md)
 
 
 ## Distributed File System
-![For detailed Distributed File System configuration, see DSF.md](DFS.md)
+![For detailed Distributed File System configuration, see DSF.md](/DFS.md)
 
 ## TODO
 ### Github

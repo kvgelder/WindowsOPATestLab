@@ -18,9 +18,23 @@ New-DfsnRoot -Path '\\WindowsOPAtestLab.foots.ml\Namespace' -Type DomainV2 -Targ
 ```
 
 #### Namespace health checks
+```PowerShell
+Get-DfsnRoot -Path '\\WindowsOPAtestlab.foots.ml\Namespace'
+```
 
 ### Setting up the file structure
-
+On each file storage servers create the folder(s) which will function as the DFS storage share.
+```PowerShell
+New-Item -Path 'C:\DFS\Namespace\Public' -Type Directory
+```
+Set up the SMB share(s).
+```PowerShell
+New-SmbShare -Name 'Public$' -Description 'SMB share for the Public DFS folder.' -Path 'C:\DFS\Namespace\Public' -FullAccess 'WINOPATL\Administrator' -ChangeAccess 'Domain Users' -ReadAccess 'Authenticated Users'
+```
+On the DFS namespace server, set up DFS namespace folders for each file storage server that will be part of the DFS namespace.
+```PowerShell
+New-DfsnFolder -Path '\\WindowsOPAtestlab.foots.ml\Namespace\Public' -TargetFolder '\\Testlab-DFS1\Public$' -EnableTargetFailback
+```
 
 ### Adding FolderTargets to the DFS namespace
 

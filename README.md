@@ -120,14 +120,16 @@ New-DfsnRoot -TargetPath $TargetFolderOnServer -Type DomainV2 -Path $DFSNamespac
 ```
 
 ## TODO
-### Github
-- [ ] Move TODO list to GitHub issues
-
 ### Active Directory
 - [ ] Runbook AD: AD Object manipulation
 - [ ] Runbook AD: Trusts
-- [ ] AD: Modify Trusts
+- [ ] AD: Modify TrustedHosts
 - [ ] Check and configure DC1 and DM1 firewall settings
 
 ### Fileshare
-- [ ] Install DFS Namespaces role on DFSNS1
+- [x] Install DFS Namespaces role on DFSNS1
+- [x] Install TestLab-DFS1 and TestLab-DFS2 File Server
+- [ ] Create file structures on TestLab-DFS1 and TestLab-DFS2
+- [ ] Create SMB shares on TestLab-DFS1 and TestLab-DFS2
+- [ ] Create DFS namespace root on TestLab-DFSN1
+- [ ] Deploy TestLab-DFSN2

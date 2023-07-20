@@ -18,6 +18,7 @@ New-DfsnRoot -Path '\\WindowsOPAtestLab.foots.ml\Namespace' -Type DomainV2 -Targ
 ```
 
 #### Namespace health checks
+Check if the DfsnRoot is configured as needed using the `Get-DfsnRoot` command.
 ```PowerShell
 Get-DfsnRoot -Path '\\WindowsOPAtestlab.foots.ml\Namespace'
 ```

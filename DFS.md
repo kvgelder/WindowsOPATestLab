@@ -16,14 +16,14 @@ New-Item -Path 'C:\DFS\Namespace' -Type Directory
 Setup the DFSN Root for the newly created Namespace folder.
 ```PowerShell
 # Namespace server(s)
-New-DfsnRoot -Path '\\WindowsOPAtestLab.foots.ml\Namespace' -Type DomainV2 -TargetPath 'C:\DFS\Namespace' -EnableAccessBasedEnumeration $true
+New-DfsnRoot -Path '\\[DOMAIN NAME]\Namespace' -Type DomainV2 -TargetPath 'C:\DFS\Namespace' -EnableAccessBasedEnumeration $true
 ```
 
 #### Namespace health checks
 Check if the DfsnRoot is configured as needed using the `Get-DfsnRoot` command.
 ```PowerShell
 # Namespace server(s)
-Get-DfsnRoot -Path '\\WindowsOPAtestlab.foots.ml\Namespace'
+Get-DfsnRoot -Path '\\[DOMAIN NAME]\Namespace'
 ```
 
 ### Setting up the file structure
@@ -39,15 +39,15 @@ New-SmbShare -Name 'Public$' -Description 'Public DFS share' -Path 'C:\DFS\Names
 On the DFS namespace server, set up DFS namespace folders for each file storage server that will be part of the DFS namespace.
 ```PowerShell
 # Namespace server(s)
-New-DfsnFolder -Path '\\WindowsOPAtestlab.foots.ml\Namespace\Public' -TargetFolder '\\Testlab-DFS1\Public$' -EnableTargetFailback
-New-DfsnFolderTarget -Path '\\WindowsOPAtestlab.foots.ml\Namespace\Public' -TargetFolder '\\Testlab-DFS2\Public$' # To add additional file storage server(s)
+New-DfsnFolder -Path '\\[DOMAIN NAME]\Namespace\Public' -TargetFolder '\\[FILE SERVER 1]\Public$' -EnableTargetFailback
+New-DfsnFolderTarget -Path '\\[DOMAIN NAME]\Namespace\Public' -TargetFolder '\\[FILE SERVER 2]\Public$' # To add additional file storage server(s)
 ```
 
 #### DFS namespace folder health checks
 Check if `New-DfsnFolder` has correctly configured by running the `Get-DfsnFolder` command.
 ```PowerShell
 # Namespace server(s)
-Get-DfsnFolder -Path '\\WindowsOPAtestlab.foots.ml\Namespace\Public'
+Get-DfsnFolder -Path '\\[DOMAIN NAME]\Namespace\Public'
 ```
 
 ### [Optional] Enabling DFS replication

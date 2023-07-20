@@ -132,7 +132,8 @@ New-DfsnRoot -TargetPath $TargetFolderOnServer -Type DomainV2 -Path $DFSNamespac
 ### Fileshare
 - [x] Install DFS Namespaces role on DFSNS1
 - [x] Install TestLab-DFS1 and TestLab-DFS2 File Server
-- [ ] Create file structures on TestLab-DFS1 and TestLab-DFS2
-- [ ] Create SMB shares on TestLab-DFS1 and TestLab-DFS2
-- [ ] Create DFS namespace root on TestLab-DFSN1
+- [x] Create file structures on TestLab-DFS1 and TestLab-DFS2
+- [x] Create SMB shares on TestLab-DFS1 and TestLab-DFS2
+- [x] Create DFS namespace root on TestLab-DFSN1
+- [ ] Setup DFS replication for DFS Folder 'Private'
 - [ ] Deploy TestLab-DFSN2

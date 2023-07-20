@@ -17,6 +17,8 @@ Setup the DFSN Root for the newly created Namespace folder.
 New-DfsnRoot -Path '\\WindowsOPAtestLab.foots.ml\Namespace' -Type DomainV2 -TargetPath 'C:\DFS\Namespace' -EnableAccessBasedEnumeration $true
 ```
 
+#### Namespace health checks
+
 ### Setting up the file structure
 
 

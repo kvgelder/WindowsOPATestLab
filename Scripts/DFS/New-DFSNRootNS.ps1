@@ -23,18 +23,13 @@
 
 # Input variables
 $NamespaceName = 'Namespace'
-$HiddenShare = $True
-$TargetFolderServerName = '\\Testlab-DFS1\'
+$FolderStructure = 'C:\DFS\'
 $Domain = '\\WindowsOPATestlab.foots.ml\'
+$EnableABE = $true
 
 # Background variables, don't touch unless you know what you're doing.
-if ($HiddenShare) { 
-    $SmbShareName = $NamespaceName + '$' 
-} else { 
-    $SmbShareName = $NamespaceName
-}
-$TargetFolderOnServer = $TargetFolderServerName + $SmbShareName
+$NamespaceFolder = $FolderStructure + $NamespaceName
 $DFSNamespace = $Domain + $NamespaceName
 
 # Create DfsnRoot on DFS Namespace server
-New-DfsnRoot -TargetPath $TargetFolderOnServer -Type DomainV2 -Path $DFSNamespace -EnableAccessBasedEnumeration $true
+New-DfsnRoot -TargetPath $NamespaceFolder -Type DomainV2 -Path $DFSNamespace -EnableAccessBasedEnumeration $EnableABE

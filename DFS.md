@@ -35,6 +35,12 @@ On the DFS namespace server, set up DFS namespace folders for each file storage 
 New-DfsnFolder -Path '\\WindowsOPAtestlab.foots.ml\Namespace\Public' -TargetFolder '\\Testlab-DFS1\Public$' -EnableTargetFailback
 ```
 
+#### Dfsn Folder health checks
+Check if `New-DfsnFolder` has correctly configured by running the `Get-DfsnFolder` command.
+```PowerShell
+Get-DfsnFolder -Path '\\WindowsOPAtestlab.foots.ml\Namespace\Public'
+```
+
 ### Adding FolderTargets to the DFS namespace
 
 

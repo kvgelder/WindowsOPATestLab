@@ -13,6 +13,7 @@
 ### Github
 - [ ] Update code the scripts files.
 - [ ] Update the README.md
+- [ ] Restructure ADDS.md to match the DFS.md style/format.
 
 ### Active Directory
 - [ ] Runbook AD: AD Object manipulation

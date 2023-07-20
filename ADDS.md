@@ -2,15 +2,18 @@
 
 ## Multi server domain
 ### New Active Directory forest and domain controller.
+Start by setting up a new forest and domain controller via the `Install-ADDSForest` command.
+Make sure the DomainMode and ForestMode are set correctly.
 ```PowerShell
 # Input variables
 $DomainName = “[FQDN]” # Change [FQDN] to match your environment.
 
 Install-WindowsFeature AD-Domain-Services -IncludeManagementTools -Verbose
-Install-ADDSForest -DomainName $DomainName -DomainMode 7 -ForestMode 7 -InstallDns
+Install-ADDSForest -DomainName $DomainName -DomainMode Windows2016Domain -ForestMode Windows2016Forest -InstallDns
 ```
 
 ### Setting up an Active Directory domain controller member.
+To set up a domain controller member server, make use of the `Install-ADDSDomainController` command.
 ```PowerShell
 $DomainName = "[FQDN]" # Change [FQDN] to match your environment.
 $Credentials =  Get-Credential [NETBIOS NAME]\Administrator # Change [NETBIOS NAME] to match your environment.
@@ -20,6 +23,8 @@ Install-ADDSDomainController -DomainName $DomainName -InstallDns -Credential $Cr
 ```
 
 #### Run Active Directory Domain Services health checks
+Running the following health checks will allow you to check whether Domain has been configured as necessary.
+Make sure the FSMO roles are located on the correct domain controller, for example.
 ```PowerShell
 function Read-UserInputToContinue {
     if ($psISE) {

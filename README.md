@@ -1,6 +1,6 @@
 # WindowsOPATestLab
 
-![Testlab HLD](https://github.com/kvgelder/WindowsOPATestLab/blob/main/Documentation/HLD.png)
+![Testlab HLD](Docs/HLD.png)
 
 ## Active Directory
 [For detailed Active Directory configuration, see ADDS.md](ADDS.md)

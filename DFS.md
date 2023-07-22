@@ -84,12 +84,15 @@ Add-DfsrMember -GroupName 'DFSR Group 1' -Description '' -ComputerName 'Testlab-
 
 A connection between the DFS replication group members will have to be configured by using the `Add-DfsrConnection` command.
 ```PowerShell
+# Run on the DFS namespace server
 Add-DfsrConnection -GroupName 'DFS Group 1' -SourceComputerName 'Testlab-DFS1' -DestinationComputerName 'Testlab-DFS2'
 ```
 
 Set up the DFS replication membership settings for the DFS replication group members via the `Set-DfsrMembership`.
 In case the default staging path quota is not enough, a custom value can be set by adding the `-StagingPathQuotaInMB [integer]` parameter.
+This command will be have to run for each DFS replication group member. Multiple servers can be named in a single command by separating them with the comma character (`-ComputerName SRV2,SRV3,SRV4`).
 ```PowerShell
+# Run on the DFS namespace server
 Set-DfsrMembership -GroupName 'DFS Group 1' -FolderName 'Public' -ContentPath 'C:\DFS\DFSN1\Public' -ComputerName 'Testlab-DFS1' -PrimaryMember $true
 Set-DfsrMembership -GroupName 'DFS Group 1' -FolderName 'Public' -ContentPath 'C:\DFS\DFSN1\Public' -ComputerName 'Testlab-DFS2' -PrimaryMember $false
 ```

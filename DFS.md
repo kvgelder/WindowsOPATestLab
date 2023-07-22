@@ -56,7 +56,7 @@ The following needs to be configured to get DFS replication to work properly.
 - DFS Replication Group
 - DFS Replicated Folders
 - DFS Replication Members
-
+- DFS Replication connection
 - DFS Replication Memberships
 
 ### Configuring DFS replication

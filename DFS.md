@@ -50,4 +50,46 @@ Check if `New-DfsnFolder` has correctly configured by running the `Get-DfsnFolde
 Get-DfsnFolder -Path '\\[FQDN]\Namespace\Public'
 ```
 
-### [Optional] Enabling DFS replication
+## DFS replication
+### Requirements
+The following needs to be configured to get DFS replication to work properly.
+- DFS Replication Group
+- DFS Replicated Folders
+- DFS Replication Members
+
+- DFS Replication Memberships
+
+### Configuring DFS replication
+Set up a DFS replication group using `New-DfsReplicationGroup`.
+The DomainName parameter is optional. Leaving the DomainName blank will cause the current domain to be used.
+```PowerShell
+# Run on the DFS namespace server
+New-DfsReplicationGroup -GroupName 'DFSR Group 1' -Description '' -DomainName '[FQDN]'
+```
+
+Next, add the folders that need to be replicated as DFS replicated folders to the replication group using `New-DfsReplicatedFolder`. 
+The DomainName parameter is optional. Leaving the DomainName blank will cause the current domain to be used.
+```PowerShell
+# Run on the DFS namespace server
+New-DfsReplicatedFolder -GroupName 'DFSR Group 1' -Description '' -FolderName 'Public' -DomainName '[FQDN]
+```
+
+Add each server that will be part of the DFS replication group as DFS replication members to the replication group using `Add-DfsrMember`.
+```PowerShell
+# Run on the DFS namespace server
+Add-DfsrMember -GroupName 'DFSR Group 1' -Description '' -ComputerName 'Testlab-DFS1' -DomainName '[FQDN]'
+Add-DfsrMember -GroupName 'DFSR Group 1' -Description '' -ComputerName 'Testlab-DFS2' -DomainName '[FQDN]'
+# etc ...
+```
+
+A connection between the DFS replication group members will have to be configured by using the `Add-DfsrConnection` command.
+```PowerShell
+Add-DfsrConnection -GroupName 'DFS Group 1' -SourceComputerName 'Testlab-DFS1' -DestinationComputerName 'Testlab-DFS2'
+```
+
+Set up the DFS replication membership settings for the DFS replication group members via the `Set-DfsrMembership`.
+In case the default staging path quota is not enough, a custom value can be set by adding the `-StagingPathQuotaInMB [integer]` parameter.
+```PowerShell
+Set-DfsrMembership -GroupName 'DFS Group 1' -FolderName 'Public' -ContentPath 'C:\DFS\DFSN1\Public' -ComputerName 'Testlab-DFS1' -PrimaryMember $true
+Set-DfsrMembership -GroupName 'DFS Group 1' -FolderName 'Public' -ContentPath 'C:\DFS\DFSN1\Public' -ComputerName 'Testlab-DFS2' -PrimaryMember $false
+```

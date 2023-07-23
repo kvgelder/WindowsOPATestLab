@@ -50,7 +50,7 @@ System.String   TrustedHosts                                   10.10.10.100,10.1
 By using the `-Concatenate` parameter the specified `-Value` will be added to the existing TrustedHosts list.
 
 ### Adding all domain joined devices to the TrustedHosts list.
-Adding all domain joined devices to the TrustedHosts list is a very simple configuration.
+Adding all domain joined devices to the TrustedHosts list is a straight forward configuration.
 ```PowerShell
 Set-Item WSMan:\localhost\Client\TrustedHosts *.[FQDN]
 ```

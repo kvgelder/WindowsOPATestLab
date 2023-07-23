@@ -56,3 +56,28 @@ Set-Item WSMan:\localhost\Client\TrustedHosts *.[FQDN]
 ```
 
 ### Removing values from the TrustedHosts list configuration.
+Removing specific addresses is a little bit more difficult.
+But to simplify things we can make use of the Regex feature and built-in $Matches Hashtable.
+```PowerShell
+Get-Item WSMan:\localhost\Client\TrustedHosts
+
+Type            Name                           SourceOfValue   Value
+----            ----                           -------------   -----
+System.String   TrustedHosts                                   10.10.10.100,10.10.10.200
+
+$List = (Get-Item WSMan:\localhost\Client\TrustedHosts).Value
+# If statement that checks if list matches ',[IP]' and '[IP]'. 
+# If the IP address is first in the list of values, the trailing ',' will have to be removed.
+$List -match ',?10.10.10.200'
+# We check for ,192.168.88.102 in case the IP address we are looking for is not the only IP address in the list.
+# Otherwise the preceeding ',' will be left in the list which could cause problems. 
+# This could also be a computer name instead of an IP address.
+$List = $List.Replace($Matches.0, '') # Replace the found string with nothing.
+Set-Item WSMan:\localhost\Client\TrustedHosts -Value $List # Set the TrustedHosts list to match our edited list.
+
+Get-Item WSMan:\localhost\Client\TrustedHosts
+
+Type            Name                           SourceOfValue   Value
+----            ----                           -------------   -----
+System.String   TrustedHosts                                   10.10.10.100
+```

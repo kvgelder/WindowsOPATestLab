@@ -29,3 +29,6 @@
 - [x] Create DFS namespace root on TestLab-DFSN1
 - [ ] Setup DFS replication for DFS Folder 'Private'
 - [ ] Deploy TestLab-DFSN2
+
+### TrustedHosts
+- [ ] IP/Device removal script will leave a comma if the first value in the list is deleted.

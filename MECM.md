@@ -6,8 +6,25 @@ Setting up MECM does require some preparation.
 
 ## Requirements and pre-requisites
 #### Operating System
-Each site system must be installed on a 64 bit OS.  
-The distribution point roles could be installed on some 32 bit Operating Systems.
+The Configuration Manager site systems **must** be installed on a 64 bit OS.  
+Distribution point roles could be installed on some 32 bit Operating Systems.
+Windows Server Core is also not supported for site system installations.
+
+After installing the site system server, certain configurations cannot be changed.
+This includes:
+- The domain name of where the site system server is located. (Domain rename)
+- Domain membership of the site system server. 
+- Name of the site system server.
+
+In order to change any of these values, the site system role will first have to be removed from the server.
+After the changes have been implemented, the site system role can be reinstalled.
+
+Changes affecting the site server, first uninstall the the site server and reinstall the site server after implementing the changes.
+
+Site systems roles cannot be installed on an instance of a Windows server cluster.
+
+**Important**
+Do not change the start up type or log on as settings for any Configuration Manager services. This might prevent key services from running / starting properly.
 
 ### Hardware requirements
 #### Primary site server and database site role on same server

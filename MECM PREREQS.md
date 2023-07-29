@@ -31,7 +31,7 @@ Microsoft Endpoint Configuration Manager pre-requisites for a lab environment
 - [ ] IIS Application Development + ISAPI Extensions
 - [ ] Windows Authentication role for increased security.
 - [ ] IIS 6 compatibility -> IIS 6 Metabase and IIS 6 WMI.
-- [ ] IIS needs to allow the GET, HEAD, and PROPFIND HTTP verbs.
+- [ ] IIS needs permissions to use the GET, HEAD, and PROPFIND HTTP verbs.
 - [ ] Configuration Manager will install Microsoft Visual C++ 2015-2019 redistributable on each server that hosts a distribution point.
 To enable PXE support there are 2 options.
 - [ ] Enable the Configuration Manager PXE responder, or

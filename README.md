@@ -20,6 +20,7 @@
 - [ ] Runbook AD: Trusts
 - [ ] AD: Modify TrustedHosts
 - [ ] Check and configure DC1 and DM1 firewall settings
+- [ ] AD Primary and member domain controllers trusts
 
 ### Fileshare
 - [x] Install DFS Namespaces role on DFSNS1

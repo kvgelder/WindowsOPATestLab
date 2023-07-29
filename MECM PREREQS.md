@@ -1,6 +1,6 @@
 Microsoft Endpoint Configuration Manager pre-requisites for a lab environment
 
-- [ ] Windows Server 64 bit
+- [ ] Windows Server Desktop Experience 64 bit
 - [ ] 2-4 CPU cores
 - [ ] 8-12 GB memory
 - [ ] 100 GB disk space

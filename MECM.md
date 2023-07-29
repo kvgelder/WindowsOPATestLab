@@ -5,8 +5,7 @@ Microsoft Endpoint Configuration Manager (MECM), formerly System Center Configur
 Setting up MECM does require some preparation
 
 ## Requirements and pre-requisites
-- Operating System
-
+#### Operating System
 Each site system must be installed on a 64 bit OS
 The distribution points could be installed on some 32 bit Operating Systems.
 

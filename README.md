@@ -6,7 +6,7 @@
 [For detailed Active Directory configuration, see ADDS.md](ADDS.md)  
 [For detailed Distributed File System configuration, see DSF.md](DFS.md)  
 [For detailed MECM configuration, see MECM.md](MECM.md)  
-[For MECM pre-reqs, see MECM PREREQS.md](MECMPREREQS.md)  
+[For MECM pre-reqs, see MECM PREREQS.md](MECM%20PREREQS.md)  
 
 ## TODO
 ### Scripts

@@ -1,7 +1,7 @@
 Microsoft Endpoint Configuration Manager pre-requisites for a lab environment
 
 # Table of Contents
-[Single server MECM lab requirements](https://github.com/kvgelder/WindowsOPATestLab/blob/main/MECM%20PREREQS.md#single-server-mecm-environment)
+[Single server MECM lab requirements](#singleservermecmenv)
 
 # General Overview
 - [ ] Windows Server Desktop Experience 64 bit
@@ -77,7 +77,7 @@ When the Software Update Point is installed on a remote site system, install the
 - [ ] Application Development ASP.NET 3.5; .NET Extensibilty 3.5; ASP.NET 4.5 (auto selected option); .NET Extensibility 4.5
 - [ ] IIS 6 Management compatibility + IIS 6 Metabase
 
-
+<a name="singleservermecmenv"/>
 # Single Server MECM environment
 - [ ] Windows Server Desktop Experience 64 bit
 - [ ] 2-4 CPU cores

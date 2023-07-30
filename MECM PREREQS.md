@@ -11,6 +11,7 @@ Microsoft Endpoint Configuration Manager pre-requisites for a lab environment
 - [Management Point](#management-point)
 - [Software Update Point](#software-update-point)
 - [State Migration Point](#state-migration-point)
+
 [Single server MECM lab requirements](#Single-server-MECM-environment)
 
 # General Overview

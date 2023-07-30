@@ -10,8 +10,9 @@
 [For detailed Distributed File System configuration, see DSF.md](DFS.md)
 
 ## TODO
-### Github
+### Scripts
 - [ ] Update code the scripts files.
+- [ ] Write a script that checks for the pre-reqs per MECM role. (Multiple scripts for each MECM role?)
 
 ### Active Directory
 - [ ] Runbook AD: AD Object manipulation

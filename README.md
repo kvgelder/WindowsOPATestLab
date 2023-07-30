@@ -2,11 +2,8 @@
 
 ![Testlab HLD](Docs/HLD.png)
 
-##### Active Directory
+
 [For detailed Active Directory configuration, see ADDS.md](ADDS.md)
-
-
-##### Distributed File System
 [For detailed Distributed File System configuration, see DSF.md](DFS.md)
 
 ## TODO

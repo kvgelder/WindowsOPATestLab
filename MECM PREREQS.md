@@ -23,7 +23,7 @@ General hardware requirements
 Active Directory
 - [ ] Service Account is created specifically for MECM and SQL Server
 - [ ] Server is domain joined
-- [ ] Server device name has been configured
+- [ ] Server hostname has been configured
 
 General MECM requirements
 - [ ] .NET version 4.8 is installed (version 4.6.2 minimum).

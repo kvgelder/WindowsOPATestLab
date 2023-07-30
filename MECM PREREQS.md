@@ -78,6 +78,7 @@ When the Software Update Point is installed on a remote site system, install the
 - [ ] IIS 6 Management compatibility + IIS 6 Metabase
 
 <a name="singleservermecmenv"/>
+
 # Single Server MECM environment
 - [ ] Windows Server Desktop Experience 64 bit
 - [ ] 2-4 CPU cores

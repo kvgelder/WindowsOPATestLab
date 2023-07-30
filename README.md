@@ -12,8 +12,6 @@
 ## TODO
 ### Github
 - [ ] Update code the scripts files.
-- [x] Update the README.md
-- [x] Restructure ADDS.md to match the DFS.md style/format.
 
 ### Active Directory
 - [ ] Runbook AD: AD Object manipulation
@@ -23,11 +21,6 @@
 - [ ] AD Primary and member domain controllers trusts
 
 ### Fileshare
-- [x] Install DFS Namespaces role on DFSNS1
-- [x] Install TestLab-DFS1 and TestLab-DFS2 File Server
-- [x] Create file structures on TestLab-DFS1 and TestLab-DFS2
-- [x] Create SMB shares on TestLab-DFS1 and TestLab-DFS2
-- [x] Create DFS namespace root on TestLab-DFSN1
 - [ ] Setup DFS replication for DFS Folder 'Private'
 - [ ] Deploy TestLab-DFSN2
 

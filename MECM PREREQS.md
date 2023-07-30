@@ -5,6 +5,9 @@ Microsoft Endpoint Configuration Manager pre-requisites for a lab environment
 - [ ] 8-12 GB memory
 - [ ] 100 GB disk space
 
+# Active Directory
+- [ ] Service Account is created specifically for MECM and SQL Server
+
 # Site Server
 - [ ] Server is domain joined
 - [ ] Server device name has been configured

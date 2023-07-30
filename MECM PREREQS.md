@@ -1,7 +1,8 @@
 Microsoft Endpoint Configuration Manager pre-requisites for a lab environment
 
 # Table of Contents
-[General Overview](#General-Overview)
+[Single server MECM lab requirements](#Single-server-MECM-environment)  
+[General Overview](#General-Overview)  
 - [Active Directory](#active-directory)
 - [Site Server](#site-server)
 - [SQL Server Native Client](#sql-server-native-client)
@@ -12,7 +13,44 @@ Microsoft Endpoint Configuration Manager pre-requisites for a lab environment
 - [Software Update Point](#software-update-point)
 - [State Migration Point](#state-migration-point)
 
-[Single server MECM lab requirements](#Single-server-MECM-environment)
+# Single Server MECM environment
+- [ ] Windows Server Desktop Experience 64 bit
+- [ ] 2-4 CPU cores
+- [ ] 8-12 GB memory
+- [ ] 100 GB disk space
+
+- [ ] Service Account is created specifically for MECM and SQL Server
+
+- [ ] Server is domain joined
+- [ ] Server device name has been configured
+- [ ] .NET version 4.8 is installed (version 4.6.2 minimum).
+- [ ] Windows Feature .NET Framework 3.5 is enabled
+- [ ] Windows Assessment and Deployment Kit (ADK) must be installed.
+- [ ] Microsoft Visual C++ 2015-2019 redistributable  is installed automatically starting in version 2107.
+- [ ] Windows Server Update Services role and features enabled
+- [ ] Remote Differential Compression role and features enabled
+
+- [ ] SQL Server 2022 is installed (MECM Current Branch 2303+)
+- [ ] Default or named instance of SQL Server
+- [ ] Register the Service Principal Name (SPN) for the service account to run the SQL Server service
+
+- [ ] BITS Server Role + auto selected options enabeld
+
+- [ ] IIS Server role + Applications development ISAPI extensions enabled
+- [ ] IIS 6 Management Compatibility + IIS 6 Metabase + IIS 6 WMI enabled
+- [ ] IIS needs permission for the following HTTP verbs: GET, POST, CCM_POST, HEAD, PROPFIND
+- [ ] Default IIS configuration is required for the Software Update Point role
+
+- [ ] Windows Defender features are enabled (for the Endpoint Protection Point role)
+
+The following are required for the State Migration Point role
+- [ ] HTTP Activation (auto selected option)
+- [ ] ASP.NET 4.5
+- [ ] IIS Common HTTP features - Default document
+- [ ] Application Development ASP.NET 3.5; .NET Extensibilty 3.5; ASP.NET 4.5 (auto selected option); .NET Extensibility 4.5
+
+
+
 
 # General Overview
 - [ ] Windows Server Desktop Experience 64 bit
@@ -88,56 +126,15 @@ When the Software Update Point is installed on a remote site system, install the
 - [ ] Application Development ASP.NET 3.5; .NET Extensibilty 3.5; ASP.NET 4.5 (auto selected option); .NET Extensibility 4.5
 - [ ] IIS 6 Management compatibility + IIS 6 Metabase
 
-# Single Server MECM environment
-- [ ] Windows Server Desktop Experience 64 bit
-- [ ] 2-4 CPU cores
-- [ ] 8-12 GB memory
-- [ ] 100 GB disk space
 
-- [ ] Service Account is created specifically for MECM and SQL Server
 
-- [ ] Server is domain joined
-- [ ] Server device name has been configured
-- [ ] .NET version 4.8 is installed (version 4.6.2 minimum).
-- [ ] Windows Feature .NET Framework 3.5 is enabled
-- [ ] Windows Assessment and Deployment Kit (ADK) must be installed.
-- [ ] Microsoft Visual C++ 2015-2019 redistributable  is installed automatically starting in version 2107.
-- [ ] Windows Server Update Services role and features enabled
-- [ ] Remote Differential Compression role and features enabled
 
-- [ ] SQL Server 2022 is installed (MECM Current Branch 2303+)
-- [ ] Default or named instance of SQL Server
-- [ ] Register the Service Principal Name (SPN) for the service account to run the SQL Server service
 
-- [ ] BITS Server Role + auto selected options enabeld
 
-- [ ] IIS Server role + Applications development ISAPI extensions enabled
-- [ ] IIS 6 Management Compatibility + IIS 6 Metabase + IIS 6 WMI enabled
-- [ ] IIS needs permission for the following HTTP verbs: GET, POST, CCM_POST, HEAD, PROPFIND
-- [ ] Default IIS configuration is required for the Software Update Point role
 
-- [ ] Windows Defender features are enabled (for the Endpoint Protection Point role)
 
-The following are required for the State Migration Point role
-- [ ] HTTP Activation (auto selected option)
-- [ ] ASP.NET 4.5
-- [ ] IIS Common HTTP features - Default document
-- [ ] Application Development ASP.NET 3.5; .NET Extensibilty 3.5; ASP.NET 4.5 (auto selected option); .NET Extensibility 4.5
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
+
 
 - [ ] SMS Provider Role <- used to access and modify Configuration Manager data
-
-
 
 [Site prerequisites](https://learn.microsoft.com/en-us/mem/configmgr/core/plan-design/configs/site-and-site-system-prerequisites)

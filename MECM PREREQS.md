@@ -1,5 +1,8 @@
 Microsoft Endpoint Configuration Manager pre-requisites for a lab environment
 
+# Table of Contents
+[Single server MECM lab requirements](https://github.com/kvgelder/WindowsOPATestLab/blob/main/MECM%20PREREQS.md#single-server-mecm-environment)
+
 # General Overview
 - [ ] Windows Server Desktop Experience 64 bit
 - [ ] 2-4 CPU cores

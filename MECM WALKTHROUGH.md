@@ -84,7 +84,10 @@ Start the SQL installer
     - Set your Instance Root directory, Shared feature directory, and Shared Feature directory x86
     - Instance can be either a named or default instance, use a dedicated instance for each site though.
     - Specified SAMECM1 (Normal AD User) account as SQL Agent and Database Account
+    Default specified accounts: `NT Service\SQLAgent$MECMMSSQLSERVER` and `NT Service\MSSQL$MECMMSSQLSERVER`
 
     - Select authentication (Windows Authentication)
     - Specify SQL Server Admin
     - Leave the other settings default
+
+    - 

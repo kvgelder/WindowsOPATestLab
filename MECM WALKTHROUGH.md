@@ -72,10 +72,10 @@
 
     Configure the firewall to allow the correct SQL ports.
 
-    ```PowerShell
-    New-NetFirewallRule -DisplayName "SQLServer default instance" -Direction Inbound -LocalPort 1433 -Protocol TCP -Action Allow
-    New-NetFirewallRule -DisplayName "SQLServer Browser service" -Direction Inbound -LocalPort 1434 -Protocol UDP -Action Allow
-    ```
+```PowerShell
+New-NetFirewallRule -DisplayName "SQLServer default instance" -Direction Inbound -LocalPort 1433 -Protocol TCP -Action Allow
+New-NetFirewallRule -DisplayName "SQLServer Browser service" -Direction Inbound -LocalPort 1434 -Protocol UDP -Action Allow
+```
     Make sure the account you're signed in with has the correct admin permissions (Local admin in this example)
     Start the SQL installer
         - Run the System Configuration Checker

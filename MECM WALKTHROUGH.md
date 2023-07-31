@@ -69,3 +69,22 @@ Install the following roles and features
             IIS 6 Management Compatibility
             IIS 6 Metabase Compatibility
             IIS 6 WMI Compatibility
+
+Configure the firewall to allow the correct SQL ports.
+
+```PowerShell
+New-NetFirewallRule -DisplayName "SQLServer default instance" -Direction Inbound -LocalPort 1433 -Protocol TCP -Action Allow
+New-NetFirewallRule -DisplayName "SQLServer Browser service" -Direction Inbound -LocalPort 1434 -Protocol UDP -Action Allow
+```
+Make sure the account you're signed in with has the correct admin permissions (Local admin in this example)
+Start the SQL installer
+    - Run the System Configuration Checker
+    - Start the installation of a standalone server
+    - Select the Database Engine Services feature
+    - Set your Instance Root directory, Shared feature directory, and Shared Feature directory x86
+    - Instance can be either a named or default instance, use a dedicated instance for each site though.
+    - Specified SAMECM1 (Normal AD User) account as SQL Agent and Database Account
+
+    - Select authentication (Windows Authentication)
+    - Specify SQL Server Admin
+    - Leave the other settings default

@@ -90,4 +90,10 @@ New-NetFirewallRule -DisplayName "SQLServer Browser service" -Direction Inbound 
         - Specify SQL Server Admin
         - Leave the other settings default
 
-        - 
+        - Install Windows ADK
+            Features:
+            - Deployment Tools
+            - ICD
+            - Configuration Designer
+            - USMT
+            - Windows Performance Toolkit

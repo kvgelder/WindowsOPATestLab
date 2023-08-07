@@ -64,7 +64,7 @@
             ASP.NET 4.8
             ISAPI Extensions
             ISAPI Filters
-        Managament Tools
+        Management Tools
             IIS Management Console
             IIS 6 Management Compatibility
             IIS 6 Metabase Compatibility

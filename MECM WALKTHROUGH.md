@@ -5,10 +5,10 @@ Basic Configuration
     Create MECM AD account
     Add MECM AD account to Local Admins
 
-Install the following roles and features
-    Roles:
-    - Web Server (IIS)
-    - Windows Server Update Services <################> Has been causing issues Can't seem to install. "Features or Roles require a restart"
+Install the following roles and features  
+    Roles:  
+    - Web Server (IIS)  
+    - Windows Server Update Services <################> Has been causing issues Can't seem to install. "Features or Roles require a restart"  
 
     Features:
     - .NET Framework 3.5 features

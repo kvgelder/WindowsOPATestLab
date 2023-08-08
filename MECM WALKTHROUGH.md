@@ -71,7 +71,7 @@ Install the following roles and features
             IIS 6 Metabase Compatibility
             IIS 6 WMI Compatibility
 
-Automatically start the BITS service. 
+Automatically start the BITS service.  
     - Open the services manager  
     - Right click the BITS service and select properties.  
     - Set startup type to Automatic delayed

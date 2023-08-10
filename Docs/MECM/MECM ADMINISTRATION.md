@@ -50,5 +50,14 @@ This will create the GPO, link it to the correct OU. And import the settings int
 3. The site server needs to be able to access the ADMIN$ share on the target computer.  
 
 4. The firewall on the target computer needs to be configured to allow communication between the site computer and the target computer.  
+The following ports are recommended to be opened on the MECM client target devices.
+
+- TCP 135: Used for Remote Procedure Calls (RPC)
+- TCP 2701-2702: Used for the Background Intelligent Transfer Service (BITS)
+- TCP 2703: Used for the CCMExec service which manages the main client agent functionality
+- TCP 49152-65535: A dynamic port range used for various communication
+- TCP 69: Used for PXE deployments
+    - UDP 69: Used for TFTP communication during the PXE boot process
+- TCP 4011: Used for Wake On LAN (WoL) communication
 
 5. The management point is operational.

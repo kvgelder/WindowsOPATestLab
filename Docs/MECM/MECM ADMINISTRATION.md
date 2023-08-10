@@ -10,9 +10,9 @@ In order to push the client installation to a target device, a few things will n
 
 #### 1. Local Administrator  
 In order to deploy the client agent via the Client Push Installation, we need to make sure this account in MECM is a member of the Local Administrators group on the client computer.
-If this is not the case, we can do this via GPO.
+If this is not the case, one of the ways we can do this is via GPO.
 
-First create a new Active Directory Group, to which you add the correct Active Directory users.  
+First create a new Active Directory Group, to which you add the Active Directory users that need have the Local Administrator permissions.  
 Now open the Group Policy editor to create the following GPO: `Computer/Preferences/Control Panel Settings/Local Users and Groups/`. Here you can add the newly created Active Directory group.  
 Set the action to `Update`. Change the group name to `Administrators (built-in)`. Add the previously created Active Directory security group to the `Members` list.  
 

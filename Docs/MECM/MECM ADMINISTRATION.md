@@ -6,7 +6,7 @@ By default MECM will check for domain joined devices ever 60 minutes. If new dev
 This interval can be modified via the Administration/Client Settings/Default Client Settings/Enrollment option page.
 
 ### Installing the MECM client using the Push Installation option
-In order to push the client installation to a target device, a few things will need to be verified.  
+In order to push the client installation to a target device, a few things will need to be verified and configured.  
 
 #### 1. Local Administrator  
 In order to deploy the client agent via the Client Push Installation, we need to make sure this account in MECM is a member of the Local Administrators group on the client computer.
@@ -55,12 +55,30 @@ This will create the GPO, link it to the correct OU. And import the settings int
 #### 4. The firewall on the target computer needs to be configured to allow communication between the site computer and the target computer.  
 The following general ports are recommended to be opened on the MECM client target devices.
 
-- TCP 135: Used for Remote Procedure Calls (RPC)
-- TCP 2701-2702: Used for the Background Intelligent Transfer Service (BITS)
-- TCP 2703: Used for the CCMExec service which manages the main client agent functionality
-- TCP 49152-65535: A dynamic port range used for various communication
-- TCP 69: Used for PXE deployments
-    - UDP 69: Used for TFTP communication during the PXE boot process
-- TCP 4011: Used for Wake On LAN (WoL) communication
+- **TCP 135**: Used for Remote Procedure Calls (RPC)
+- **TCP 2701-2702**: Used for the Background Intelligent Transfer Service (BITS)
+- **TCP 2703**: Used for the CCMExec service which manages the main client agent functionality
+- **TCP 49152-65535**: A dynamic port range used for various communication
+- **TCP 69**: Used for PXE deployments
+    - **UDP 69**: Used for TFTP communication during the PXE boot process
+- **TCP 4011**: Used for Wake On LAN (WoL) communication
+
+```PowerShell
+New-NetFirewallRule -DisplayName "MECM Client Agent - RPC" -Direction Inbound -LocalPort 135 -Protocol TCP -Action Allow
+
+New-NetFirewallRule -DisplayName "MECM Client Agent - BITS" -Direction Inbound -LocalPort 2701,2702 -Protocol TCP -Action Allow
+
+New-NetFirewallRule -DisplayName "MECM Client - CCMExec" -Direction Inbound -LocalPort 2703 -Protocol TCP -Action Allow
+
+New-NetFirewallRule -DisplayName "MECM Client Agent - PXE" -Direction Inbound -LocalPort 69 -Protocol TCP -Action Allow
+
+New-NetFirewallRule -DisplayName "MECM Client Agent - TFTP for PXE" -Direction Inbound -LocalPort 69 -Protocol UDP -Action Allow
+
+New-NetFirewallRule -DisplayName "MECM Client Agent - WoL" -Direction Inbound -LocalPort 4011 -Protocol TCP -Action Allow
+
+New-NetFirewallRule -DisplayName "MECM Client Agent - Ephemeral Communication" -Direction Inbound -LocalPort 49152-65535 -Protocol TCP -Action Allow
+```
+
+# TODO: GPO walkthrough
 
 #### 5. The management point is operational.

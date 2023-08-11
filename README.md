@@ -3,16 +3,16 @@
 ![Testlab HLD](Docs/HLD.png)
 
 #### Active Directory Domain Services
-[For detailed Active Directory configuration, see ADDS.md](ADDS.md)  
+[For detailed Active Directory configuration, see ADDS.md](Docs/ADDS/ADDS.md)  
 
 #### Distributed File System
-[For detailed Distributed File System configuration, see DSF.md](DFS.md)  
+[For detailed Distributed File System configuration, see DSF.md](Docs/DFS/DFS.md)  
 
 #### Microsoft Endpoint Configuration Manager
-[For detailed MECM configuration, see MECM.md](MECM.md)  
-[For MECM pre-reqs, see MECM PREREQS.md](MECM%20PREREQS.md)  
-[For a MECM standalone walkthrough, see MECM WALKTHROUGH.md](MECM%20WALKTHROUGH.md)  
-[For MECM Administration, see MECM ADMINISTRATION.md](MECM%20ADMINISTRATION.md)  
+[For detailed MECM configuration, see MECM.md](Docs/MECM/MECM.md)  
+[For MECM pre-reqs, see MECM PREREQS.md](Docs/MECM/MECM%20PREREQS.md)  
+[For a MECM standalone walkthrough, see MECM WALKTHROUGH.md](Docs/MECM/MECM%20WALKTHROUGH.md)  
+[For MECM Administration, see MECM ADMINISTRATION.md](Docs/MECM/MECM%20ADMINISTRATION.md)  
 
 
 ## TODO

@@ -2,7 +2,7 @@ Basic Configuration
     Set hostname
     Join Domain
 
-    Create MECM AD account
+    Create MECM AD account ### (standalone) Managed Service Account -> New-ADServiceAccount
     Add MECM AD account to Local Admins
 
 Install the following roles and features  

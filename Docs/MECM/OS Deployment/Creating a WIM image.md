@@ -14,5 +14,5 @@ do {
     $SourceIndex = Read-Host "Select source index integer"
 } until ($SourceIndex -gt 0)
 
-New-WindowsImage -CapturePath $SourceImage -ImagePath $DestinationImage
+Export-WindowsImage -SourceImagePath $SourceImage -DestinationImagePath $DestinationImage -SourceIndex $SourceIndex -CheckIntegrity
 ```

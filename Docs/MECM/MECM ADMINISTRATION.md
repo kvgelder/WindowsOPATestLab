@@ -62,23 +62,63 @@ The following general ports are recommended to be opened on the MECM client targ
 - **TCP 69**: Used for PXE deployments
     - **UDP 69**: Used for TFTP communication during the PXE boot process
 - **TCP 4011**: Used for Wake On LAN (WoL) communication
+- **TCP 10123**: BGB Client connectivity and SMS Notification Client Communication
 
 ```PowerShell
-New-NetFirewallRule -DisplayName "MECM Client Agent - RPC" -Direction Inbound -LocalPort 135 -Protocol TCP -Action Allow
+# Inbound rules
+New-NetFirewallRule -DisplayName "MECM Client Agent - RPC" -Direction Inbound -LocalPort 135 -Protocol TCP -Action Allow -Profile Domain
 
-New-NetFirewallRule -DisplayName "MECM Client Agent - BITS" -Direction Inbound -LocalPort 2701,2702 -Protocol TCP -Action Allow
+New-NetFirewallRule -DisplayName "MECM Client Agent - BITS" -Direction Inbound -LocalPort 2701,2702 -Protocol TCP -Action Allow -Profile Domain
 
-New-NetFirewallRule -DisplayName "MECM Client - CCMExec" -Direction Inbound -LocalPort 2703 -Protocol TCP -Action Allow
+New-NetFirewallRule -DisplayName "MECM Client Agent - CCMExec" -Direction Inbound -LocalPort 2703 -Protocol TCP -Action Allow -Profile Domain
 
-New-NetFirewallRule -DisplayName "MECM Client Agent - PXE" -Direction Inbound -LocalPort 69 -Protocol TCP -Action Allow
+New-NetFirewallRule -DisplayName "MECM Client Agent - PXE" -Direction Inbound -LocalPort 69 -Protocol TCP -Action Allow -Profile Domain
 
-New-NetFirewallRule -DisplayName "MECM Client Agent - TFTP for PXE" -Direction Inbound -LocalPort 69 -Protocol UDP -Action Allow
+New-NetFirewallRule -DisplayName "MECM Client Agent - TFTP for PXE" -Direction Inbound -LocalPort 69 -Protocol UDP -Action Allow -Profile Domain
 
-New-NetFirewallRule -DisplayName "MECM Client Agent - WoL" -Direction Inbound -LocalPort 4011 -Protocol TCP -Action Allow
+New-NetFirewallRule -DisplayName "MECM Client Agent - WoL" -Direction Inbound -LocalPort 4011 -Protocol TCP -Action Allow -Profile Domain
 
-New-NetFirewallRule -DisplayName "MECM Client Agent - Ephemeral Communication" -Direction Inbound -LocalPort 49152-65535 -Protocol TCP -Action Allow
+New-NetFirewallRule -DisplayName "MECM Client Agent - Ephemeral Communication" -Direction Inbound -LocalPort 49152-65535 -Protocol TCP -Action Allow -Profile Domain
+
+New-NetFirewallRule -DisplayName "MECM Client Agent - BGB Client and SMS Notification Client Communication" -Direction Inbound -LocalPort 10123 -Protocol TCP -Action Allow -Profile Domain
+
+# Outbound rules
+New-NetFirewallRule -DisplayName "MECM Client Agent - RPC" -Direction Outbound -LocalPort 135 -Protocol TCP -Action Allow -Profile Domain
+
+New-NetFirewallRule -DisplayName "MECM Client Agent - BITS" -Direction Outbound -LocalPort 2701,2702 -Protocol TCP -Action Allow -Profile Domain
+
+New-NetFirewallRule -DisplayName "MECM Client Agent - CCMExec" -Direction Outbound -LocalPort 2703 -Protocol TCP -Action Allow -Profile Domain
+
+New-NetFirewallRule -DisplayName "MECM Client Agent - PXE" -Direction Outbound -LocalPort 69 -Protocol TCP -Action Allow -Profile Domain
+
+New-NetFirewallRule -DisplayName "MECM Client Agent - TFTP for PXE" -Direction Outbound -LocalPort 69 -Protocol UDP -Action Allow -Profile Domain
+
+New-NetFirewallRule -DisplayName "MECM Client Agent - WoL" -Direction Outbound -LocalPort 4011 -Protocol TCP -Action Allow -Profile Domain
+
+New-NetFirewallRule -DisplayName "MECM Client Agent - Ephemeral Communication" -Direction Outbound -LocalPort 49152-65535 -Protocol TCP -Action Allow -Profile Domain
+
+New-NetFirewallRule -DisplayName "MECM Client Agent - BGB Client and SMS Notification Client Communication" -Direction Outbound -LocalPort 10123 -Protocol TCP -Action Allow -Profile Domain
 ```
 
 # TODO: GPO walkthrough
 
 #### 5. The management point is operational.
+
+
+### Client enrollment and connectivity issues
+#### 1. Client prerequisites
+
+#### 2. Client Agent installation 
+
+#### 3. Client Agent health avaluation scheduled task
+
+#### 4. Verify the Windows Management Instrumentation on the client device
+
+#### 5. Verify the policy platform
+Microsoft Policy Platform Processer
+Microsoft Policy Platform Local Authority
+
+#### 6. Verify the BITS service
+Background Intelligent Transfer Service
+
+#### 7. Verify remote control

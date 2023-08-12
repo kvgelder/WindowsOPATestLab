@@ -97,7 +97,6 @@ Start the SQL installer
         - Open the SQL Server Network Configuration  
         - Select 'Protocols for [instance name].  
         - Right click TCP/IP and click on properties.  
-        - On the protocol tab disable Listen All.  
         - On the IP Addresses tab, set TCP Dynamic ports to 0, and specify a static port. (Either for all IP#, or just IPAll)  
 
 

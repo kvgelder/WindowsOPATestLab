@@ -70,7 +70,7 @@ TCP ports:
 - 135: Remote Procedure Calls
 - 1433: SQL Server
 - 2701,2702: Background Intelligent Transport Service
-- 2703: CCMExe
+- 2703: CCMExec
 - 4011: Wake on Lan
 - 10123: BGB client and SMS Notification Client
 - 49152-65535: Ephemeral Communication

@@ -72,10 +72,6 @@ New-NetFirewallRule -DisplayName "MECM Client Agent - BITS" -Direction Inbound -
 
 New-NetFirewallRule -DisplayName "MECM Client Agent - CCMExec" -Direction Inbound -LocalPort 2703 -Protocol TCP -Action Allow -Profile Domain
 
-New-NetFirewallRule -DisplayName "MECM Client Agent - PXE" -Direction Inbound -LocalPort 69 -Protocol TCP -Action Allow -Profile Domain
-
-New-NetFirewallRule -DisplayName "MECM Client Agent - TFTP for PXE" -Direction Inbound -LocalPort 69 -Protocol UDP -Action Allow -Profile Domain
-
 New-NetFirewallRule -DisplayName "MECM Client Agent - WoL" -Direction Inbound -LocalPort 4011 -Protocol TCP -Action Allow -Profile Domain
 
 New-NetFirewallRule -DisplayName "MECM Client Agent - Ephemeral Communication" -Direction Inbound -LocalPort 49152-65535 -Protocol TCP -Action Allow -Profile Domain
@@ -88,10 +84,6 @@ New-NetFirewallRule -DisplayName "MECM Client Agent - RPC" -Direction Outbound -
 New-NetFirewallRule -DisplayName "MECM Client Agent - BITS" -Direction Outbound -LocalPort 2701,2702 -Protocol TCP -Action Allow -Profile Domain
 
 New-NetFirewallRule -DisplayName "MECM Client Agent - CCMExec" -Direction Outbound -LocalPort 2703 -Protocol TCP -Action Allow -Profile Domain
-
-New-NetFirewallRule -DisplayName "MECM Client Agent - PXE" -Direction Outbound -LocalPort 69 -Protocol TCP -Action Allow -Profile Domain
-
-New-NetFirewallRule -DisplayName "MECM Client Agent - TFTP for PXE" -Direction Outbound -LocalPort 69 -Protocol UDP -Action Allow -Profile Domain
 
 New-NetFirewallRule -DisplayName "MECM Client Agent - WoL" -Direction Outbound -LocalPort 4011 -Protocol TCP -Action Allow -Profile Domain
 

@@ -46,15 +46,6 @@ Requirements for the various MECM roles
 - [ ] Default IIS configuration is required for the Software Update Point role
 - [ ] Windows Defender features are enabled (for the Endpoint Protection Point role)
 
-The following are required for the State Migration Point role
-- [ ] HTTP Activation (auto selected option)
-- [ ] ASP.NET 4.5
-- [ ] IIS Common HTTP features - Default document
-- [ ] Application Development ASP.NET 3.5; .NET Extensibilty 3.5; ASP.NET 4.5 (auto selected option); .NET Extensibility 4.5
-
-
-
-
 # General Overview
 - [ ] Windows Server Desktop Experience 64 bit
 - [ ] 2-4 CPU cores
@@ -141,3 +132,10 @@ When the Software Update Point is installed on a remote site system, install the
 - [ ] SMS Provider Role <- used to access and modify Configuration Manager data
 
 [Site prerequisites](https://learn.microsoft.com/en-us/mem/configmgr/core/plan-design/configs/site-and-site-system-prerequisites)
+
+
+The following are required for the State Migration Point role
+- [ ] HTTP Activation (auto selected option)
+- [ ] ASP.NET 4.5
+- [ ] IIS Common HTTP features - Default document
+- [ ] Application Development ASP.NET 3.5; .NET Extensibilty 3.5; ASP.NET 4.5 (auto selected option); .NET Extensibility 4.5

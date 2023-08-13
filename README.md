@@ -19,6 +19,7 @@
 ### Scripts
 - [ ] Update code the scripts files.
 - [ ] Write a script that checks for the pre-reqs per MECM role. (Multiple scripts for each MECM role?)
+- [ ] Expand MECMClientFirewallCheck.ps1. Include firewall configuration.
 
 ### Active Directory
 - [ ] Runbook AD: AD Object manipulation
@@ -37,3 +38,4 @@
 
 ### TrustedHosts
 - [ ] IP/Device removal script will leave a comma if the first value in the list is deleted. -> Add an if statement to check for both situations.
+

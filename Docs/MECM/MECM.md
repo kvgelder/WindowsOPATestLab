@@ -78,7 +78,7 @@ TCP ports:
 UDP Port:
 - 1433: SQL Server
 ```
-For more detailed information see the [MECMClientFirewallCheck.ps1](Docs/Scripts/MECM/MECMClientFirewallCheck.ps1) PowerShell script.
+For more detailed information on firewall configuration see the [MECMClientFirewallCheck.ps1](Docs/Scripts/MECM/MECMClientFirewallCheck.ps1) PowerShell script.
 
 #### Domain Name Services configuration
 

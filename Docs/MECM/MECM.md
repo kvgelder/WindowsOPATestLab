@@ -23,7 +23,7 @@ Changes affecting the site server, first uninstall the the site server and reins
 
 Site systems roles cannot be installed on an instance of a Windows server cluster.
 
-**Important**
+**Important**  
 Do not change the `start up type` or `log on as` settings for any Configuration Manager services. This might prevent key services from running / starting properly.
 
 ### Hardware requirements

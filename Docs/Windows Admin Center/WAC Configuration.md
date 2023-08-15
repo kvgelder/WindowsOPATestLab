@@ -11,6 +11,7 @@ Windows Admin Center is the modern evolution of "in-box" management tools, like 
 
 - [ ] Windows Management Framework (WMF) 5.1 or higher is required
 **WMF 5.1 Preview must be uninstalled before WMF 5.1 can be installed**
+Query the `$PSVersionTable` variable in a PowerShell prompt to check which version of WMF is currently installed.
 
 WAC communicates outbound securely over to endpoints over TCP port 443. The default route is used for internet communication.
 In case outbound connectivity is restricted by a firewall or proxy server, additional configuration is required.

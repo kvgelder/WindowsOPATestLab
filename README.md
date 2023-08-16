@@ -29,12 +29,8 @@
 - [ ] AD Primary and member domain controllers trusts
 
 ### Fileshare
-- [ ] Setup DFS replication for DFS Folder 'Private'
-- [ ] Deploy TestLab-DFSN2
-
-### Remote PowerShell access
-- [ ] Enable WinRM HTTPS
-- [ ] Configure WinRM listeners for specific devices/IP addresses only
+- [x] Setup DFS replication for DFS Folder 'Private'
+- [x] Deploy TestLab-DFSN2
 
 ### TrustedHosts
 - [ ] IP/Device removal script will leave a comma if the first value in the list is deleted. -> Add an if statement to check for both situations.

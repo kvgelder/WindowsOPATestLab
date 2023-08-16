@@ -28,7 +28,7 @@
 - [ ] Runbook AD: AD Object manipulation
 - [ ] Runbook AD: Trusts
 - [ ] AD: Modify TrustedHosts
-- [ ] Check and configure DC1 and DM1 firewall settings
+- [x] Check and configure DC1 and DM1 firewall settings
 - [ ] AD Primary and member domain controllers trusts
 
 ### Fileshare

@@ -6,7 +6,7 @@
 [For detailed Active Directory configuration, see ADDS.md](Docs/ADDS/ADDS.md)  
 
 #### Dynamic Host Configuration Protocol
-[For detailed information on Dynamic Host Configuration Protocol configuration, see DHCP.md](Docs/DHCP/DHCP.md)
+[For detailed information on Dynamic Host Configuration Protocol configuration, see DHCP.md](Docs/DHCP/DHCP.md)  
 
 #### Distributed File System
 [For detailed Distributed File System configuration, see DSF.md](Docs/DFS/DFS.md)  
@@ -17,6 +17,8 @@
 [For a MECM standalone walkthrough, see MECM WALKTHROUGH.md](Docs/MECM/MECM%20WALKTHROUGH.md)  
 [For MECM Administration, see MECM ADMINISTRATION.md](Docs/MECM/MECM%20ADMINISTRATION.md)  
 
+#### Windows Admin Center
+[Information about Windows Admin Center can be found in WAC Configuration.md](Docs/Windows%20Admin%20Center/WAC%20Configuration.md)  
 
 ## TODO
 ### Scripts
@@ -28,7 +30,7 @@
 - [ ] Runbook AD: AD Object manipulation
 - [ ] Runbook AD: Trusts
 - [ ] AD: Modify TrustedHosts
-- [x] Check and configure DC1 and DM1 firewall settings
+- [] Check and configure DC1 and DM1 firewall settings
 - [ ] AD Primary and member domain controllers trusts
 
 ### Fileshare

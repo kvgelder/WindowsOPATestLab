@@ -5,6 +5,9 @@
 #### Active Directory Domain Services
 [For detailed Active Directory configuration, see ADDS.md](Docs/ADDS/ADDS.md)  
 
+#### Dynamic Host Configuration Protocol
+[For detailed information on Dynamic Host Configuration Protocol configuration, see DHCP.md](Docs/DHCP/DHCP.md)
+
 #### Distributed File System
 [For detailed Distributed File System configuration, see DSF.md](Docs/DFS/DFS.md)  
 

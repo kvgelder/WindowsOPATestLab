@@ -40,3 +40,5 @@
 ### TrustedHosts
 - [ ] IP/Device removal script will leave a comma if the first value in the list is deleted. -> Add an if statement to check for both situations.
 
+### DHCP
+- [ ] Check Get-DhcpServerv4Reservation command output

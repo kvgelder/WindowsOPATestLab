@@ -19,13 +19,13 @@ After the installation is complete the following needs to be configured to enabl
 
 First creating a DHCP server.
 ```PowerShell
-Add-DhcServerInDc -Name DHCP.testdomain.com -IPAddress 172.16.0.3
+Add-DhcpServerInDc -DnsName hostname.testdomain.com -IPAddress 172.16.0.3
 
 Get-DhcpServerInDC
 
 IPAddress           DnsName
 ---------           -------
-172.16.0.3          DHCP.testdomain.com
+172.16.0.3          hostname.testdomain.com
 ```
 
 Now we can add a scope to the newly created DHCP server.
@@ -39,3 +39,4 @@ ScopeId         SubnetMask    Name                        State  StartRange     
 -------         ----------    ----                        -----  ----------       --------        -------------
 172.16.0.0      255.255.255.0 Windows OPA Testlab Network Active 172.16.0.150     172.16.0.199    8.00:00:00
 ```
+

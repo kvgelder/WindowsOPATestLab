@@ -2,22 +2,22 @@
 
 ![Testlab HLD](Docs/HLD.png)
 
-#### Active Directory Domain Services
+#### Active Directory Domain Services (AD DS)
 [For detailed Active Directory configuration, see ADDS.md](Docs/ADDS/ADDS.md)  
 
-#### Dynamic Host Configuration Protocol
+#### Dynamic Host Configuration Protocol (DHCP)
 [For detailed information on Dynamic Host Configuration Protocol configuration, see DHCP.md](Docs/DHCP/DHCP.md)  
 
-#### Distributed File System
+#### Distributed File System (DFS)
 [For detailed Distributed File System configuration, see DSF.md](Docs/DFS/DFS.md)  
 
-#### Microsoft Endpoint Configuration Manager
+#### Microsoft Endpoint Configuration Manager (MECM / SCCM)
 [For detailed MECM configuration, see MECM.md](Docs/MECM/MECM.md)  
 [For MECM pre-reqs, see MECM PREREQS.md](Docs/MECM/MECM%20PREREQS.md)  
 [For a MECM standalone walkthrough, see MECM WALKTHROUGH.md](Docs/MECM/MECM%20WALKTHROUGH.md)  
 [For MECM Administration, see MECM ADMINISTRATION.md](Docs/MECM/MECM%20ADMINISTRATION.md)  
 
-#### Windows Admin Center
+#### Windows Admin Center (WAC)
 [Information about Windows Admin Center can be found in WAC Configuration.md](Docs/Windows%20Admin%20Center/WAC%20Configuration.md)  
 
 ## TODO

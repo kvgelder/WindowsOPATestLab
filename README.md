@@ -1,6 +1,6 @@
 # WindowsOPATestLab
 
-![Testlab HLD](Docs/HLD.png)
+![Testlab HLD](Docs/HLD_V3.png)
 
 #### Active Directory Domain Services (AD DS)
 [For detailed Active Directory configuration, see ADDS.md](Docs/ADDS/ADDS.md)  

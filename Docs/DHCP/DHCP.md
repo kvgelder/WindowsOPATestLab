@@ -13,7 +13,8 @@ Display Name            Name        Install State
 
 Install-WindowsFeature DHCP -IncludeManagementTools -IncludeAllSubFeature
 ```
-  
+
+## Configuring DHCP
 After the installation is complete the following needs to be configured to enable basic DHCP functionality.
 1. Create a DHCP server using `Add-DhcpServerInDC`.
 2. Configure an IPv4/IPv6 scope using `Add-DhcpServerv4Scope`.

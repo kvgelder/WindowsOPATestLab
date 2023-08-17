@@ -31,12 +31,23 @@ IPAddress           DnsName
 Now we can add a scope to the newly created DHCP server.
 This will create a new scope with network address 172.16.0.0 and a subnet mask of /24.
 ```PowerShell
-Add-DhcpServerv4Scope -Name "Test Domain Network" -StartRange 172.16.0.150 -EndRange 172.16.0.199 -SubnetMask 255.255.255.0
+Add-DhcpServerv4Scope -Name "Test Domain Network" -StartRange 172.16.0.1 -EndRange 172.16.0.254 -SubnetMask 255.255.255.0
 
 Get-DhcpServerv4Scope | Format-Table -Wrap -AutoSize
 
-ScopeId         SubnetMask    Name                        State  StartRange       EndRange        LeaseDuration
--------         ----------    ----                        -----  ----------       --------        -------------
-172.16.0.0      255.255.255.0 Windows OPA Testlab Network Active 172.16.0.150     172.16.0.199    8.00:00:00
+ScopeId         SubnetMask    Name                   State  StartRange     EndRange        LeaseDuration
+-------         ----------    ----                   -----  ----------     --------        -------------
+172.16.0.0      255.255.255.0 Test Domain Network    Active 172.16.0.1     172.16.0.254    8.00:00:00
 ```
 
+To exclude a certain IP range for use with hosts that require a static ip, use the `Add-DhcpServerv4ExclusionRange`.
+```PowerShell
+# Optionally, use the -ComputerName parameter to target a specific scope on a specific dhcp host.
+Add-DhcpServerv4ExclusionRange -ScopeId 172.16.0.0 -StartRange 172.16.0.1 -EndRange 172.16.0.50 
+
+Get-DhcpServerv4ExclusionRange -ScopeId 172.16.0.0
+
+ScopeId        StartRange     EndRange
+-------        ----------     --------
+172.16.0.0     172.16.0.1     172.16.0.50
+```

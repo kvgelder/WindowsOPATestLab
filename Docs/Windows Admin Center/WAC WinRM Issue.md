@@ -7,4 +7,6 @@ Run Winrm quickconfig
 
 Enable-PSRemoting
 
+Firewall configuration
+
 IP addressing / DNS issues

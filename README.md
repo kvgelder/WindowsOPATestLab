@@ -40,3 +40,8 @@
 - [ ] Topology selection with PowerShell
 - [ ] Replication group scheduling with PowerShell
 - [ ] Replication bandwith configuration with PowerShell
+
+### MECM
+- [ ] Boundaries and boundary groups
+- [ ] User / Device collections
+- [ ] Application / Package deployments

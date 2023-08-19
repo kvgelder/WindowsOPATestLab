@@ -45,3 +45,4 @@
 - [ ] Boundaries and boundary groups
 - [ ] User / Device collections
 - [ ] Application / Package deployments
+- [ ] Discovery Methods

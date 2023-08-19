@@ -27,9 +27,16 @@
 - [ ] LibreNMS?
 - [ ] Zabbix?
 - [ ] Veeam?
+- [ ] NetBox?
 
 ### TrustedHosts
 - [ ] IP/Device removal script will leave a comma if the first value in the list is deleted. -> Add an if statement to check for both situations.
 
 ### DHCP
 - [ ] Check Get-DhcpServerv4Reservation command output
+
+### DFS
+- [ ] Primary Member selection with PowerShell
+- [ ] Topology selection with PowerShell
+- [ ] Replication group scheduling with PowerShell
+- [ ] Replication bandwith configuration with PowerShell

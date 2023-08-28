@@ -15,3 +15,12 @@ Could Gateway                           6168
 Veeam Distribution Service              9380
 Veeam Backup VSS Integration            6210
 Veeam VSS Hardware Snapshot Provider    6211
+
+
+Service Log On As changes
+Veeam Backup Server RESTful API Service     SAVEEAM -> Local System
+Veeam Backup Service                        SAVEEAM -> Local System
+Veeam Broker Service                        SAVEEAM -> Local System
+Veeam CDP Coordinator Service               SAVEEAM -> Local System
+Veeam Cloud Connect Service                 SAVEEAM -> Local System
+Veeam Guest Catalog Service                 SAVEEAM -> Local System
